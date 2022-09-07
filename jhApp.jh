@@ -1,0 +1,21 @@
+entity MyUser {
+    uuid UUID required
+	username String required
+    password String required
+    firstName String required
+    lastName String required
+    email String required
+    }
+entity Profile {
+    nationality String required
+    dob LocalDate required
+	age Integer required
+    postcode String
+    city String required
+    state States required
+    country String required
+}
+relationship OneToOne {
+	MyUser to Profile
+}
+
